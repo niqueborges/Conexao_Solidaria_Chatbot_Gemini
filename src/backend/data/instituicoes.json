@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Lar da Criança Feliz",
+        "localizacao": "Rio de Janeiro",
+        "precisa": ["roupas infantis", "brinquedos educativos"],
+        "contato": "..."
+    },
+    {
+        "nome": "Sopa Solidária",
+        "localizacao": "São Paulo",
+        "precisa": ["alimentos não perecíveis", "voluntários para cozinha"],
+        "contato": "..."
+    },
+    {
+        "nome": "Aconchego Animal",
+        "localizacao": "Rio de Janeiro",
+        "precisa": ["ração para cães", "medicamentos veterinários"],
+        "contato": "..."
+    }
+]
