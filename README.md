@@ -92,12 +92,6 @@ Para acessar a poderosa **IA Gemini através da API do Google AI Studio**, é ne
 ---
 
 
-## ⚙️ Funcionalidades (Demonstração Inicial)
-
-✅ **Interface de Webchat Simples:** Permite que usuários digitem mensagens.
-✅ **Simulação de Respostas:** O JavaScript no frontend pode ter respostas predefinidas para algumas entradas do usuário, simulando a interação com o chatbot.
-✅ **Fluxo Básico:** Demonstra a entrada de uma mensagem e a exibição de uma resposta.
-
 ---
 
 ## 📂 Como Usar (Demonstração Inicial)
@@ -108,20 +102,21 @@ Para acessar a poderosa **IA Gemini através da API do Google AI Studio**, é ne
     git clone [https://github.com/niqueborges/Conexao_Solidaria_Chatbot_Gemini.git](https://github.com/niqueborges/Conexao_Solidaria_Chatbot_Gemini.git)
     ```
 
-2.  **Abra o arquivo `frontend/index.html`** no seu navegador.
-3.  **Interaja com o webchat:** Digite mensagens no campo de texto e veja as respostas simuladas.
+2.  **Configure a variável de ambiente `GOOGLE_API_KEY`** no seu sistema com a sua chave do Google AI Studio.
+3.  **Execute o backend (simulado para a apresentação):** Rode o script `src/backend/chatbot_backend.py` para verificar a inicialização da API Gemini (você verá mensagens no console).
+4.  **Abra o arquivo `frontend/index.html`** no seu navegador.
+5.  **Interaja com o webchat:** Digite mensagens no campo de texto e veja as respostas simuladas que representam a inteligência da IA Gemini.
 
 ---
 
 ## 🚀 Escalabilidade e Arquitetura Futura
 
-Embora a demonstração inicial seja um webchat simples no frontend, a arquitetura planejada para um sistema real e escalável envolve um backend robusto em **Python**. Este backend seria responsável por:
+A arquitetura planejada para um sistema real e escalável é centrada no poder da **IA Gemini no backend em Python**. Isso permitirá:
 
-* **Processamento Inteligente da Linguagem:** Utilizando bibliotecas de PLN ou serviços de NLU para entender as intenções dos usuários de forma precisa.
-* **Gerenciamento de Dados das Instituições:** Armazenando e consultando informações em um banco de dados eficiente.
-* **Comunicação com o Frontend:** Expondo uma API (usando Flask ou FastAPI) para receber as mensagens do usuário e enviar as respostas do chatbot de volta para o webchat (ou outros canais).
-* **Integração com Outros Canais:** Permitindo que o mesmo "cérebro" do chatbot em Python seja conectado a diferentes plataformas de mensagens (Telegram, WhatsApp, etc.).
-* **Escalabilidade:** A aplicação backend em Python poderia ser hospedada em plataformas de nuvem, utilizando contêineres Docker para facilitar o escalonamento e a manutenção.
+* **Processamento de Linguagem Natural Avançado:** Utilizando toda a capacidade do Gemini para entender nuances e intenções complexas.
+* **Geração de Respostas Contextuais:** O Gemini poderá gerar respostas altamente relevantes e adaptadas à conversa.
+* **Integração com Dados das Instituições:** O backend poderá fornecer informações específicas sobre as instituições com base nas consultas do usuário, utilizando a inteligência do Gemini para fazer o match ideal.
+* **Suporte Multimodal (Futuro):** A capacidade multimodal do Gemini poderá ser explorada para lidar com imagens ou outros tipos de dados relevantes para doações e necessidades.
 
 ---
 
@@ -129,16 +124,13 @@ Embora a demonstração inicial seja um webchat simples no frontend, a arquitetu
 
 Durante o desenvolvimento deste projeto, algumas dificuldades podem surgir:
 
-1.  **Criação de uma Interface de Webchat Funcional:** Mesmo que básica, garantir a usabilidade.
-2.  **Simulação da Lógica do Chatbot no Frontend:** Criar respostas que façam sentido para a demonstração.
-3.  **Planejamento da Arquitetura Backend em Python:** Definir como a lógica, os dados e a comunicação com o frontend funcionarão.
-4.  **Escolha de Tecnologias para o Backend:** Decidir quais bibliotecas e frameworks Python seriam mais adequados.
-5.  **Visualização da Escalabilidade:** Explicar claramente como a arquitetura planejada suportaria um crescimento futuro.
-6.  **Integração da Inteligência Artificial:** Garantir que a colaboração com a IA seja eficiente e produtiva.
+1.  **Integração Eficaz com a API Gemini:** Otimizar as prompts e o uso da API para obter as melhores respostas.
+2.  **Gerenciamento da Chave da API:** Garantir a segurança e o correto funcionamento da `GOOGLE_API_KEY`.
+3.  **Simulação da Inteligência Gemini no Frontend:** Representar adequadamente as capacidades da IA na demonstração inicial.
+4.  **Planejamento da Arquitetura Backend:** Definir a melhor forma de estruturar a lógica Python para interagir com a API Gemini.
+5.  **Escalabilidade com a API:** Considerar os limites de requisição e os custos associados ao uso da API Gemini em um sistema real.
 
-O aprendizado envolverá o desenvolvimento frontend básico, o planejamento de uma arquitetura backend em Python, a compreensão dos conceitos de escalabilidade em sistemas web e a experiência de trabalhar em colaboração com uma IA.
-
----
+O aprendizado envolverá a exploração da API do Google AI Studio, o desenvolvimento backend em Python para integração com APIs de IA e a compreensão das melhores práticas para utilizar modelos de linguagem grandes como o Gemini.
 
 ## ✨ Melhorias Pós-Projeto
 
@@ -156,8 +148,6 @@ Após a apresentação inicial, algumas melhorias podem ser implementadas:
 ## 🏆 Conclusão
 
 Este projeto, mesmo em sua demonstração inicial, ilustra o potencial de conectar doadores e instituições de forma acessível, com o apoio da inteligência artificial no processo de desenvolvimento. A arquitetura planejada com um backend em Python oferece um caminho claro para a escalabilidade e a implementação de funcionalidades mais inteligentes no futuro. 💪
-
-Obrigado pela sugestão! Essa adição torna o README mais completo e transparente sobre a natureza colaborativa deste projeto. 😊
 
 😊 **Contribuições e ideias são bem-vindas\!**
 
