@@ -19,8 +19,7 @@ if google_api_key:
 else:
     print("Erro: A variável de ambiente GOOGLE_API_KEY não está definida.")
     model = None
-    
-# Estado de sessão do modelo (mantém o histórico da conversa)
+
 chat_session = None
 chat_iniciado = False
 
@@ -32,23 +31,34 @@ if google_api_key:
     except Exception as e:
         print(f"Erro ao inicializar o modelo Gemini: {e}")
 
+# Palavras sensíveis proibidas segundo a LGPD
+DADOS_SENSIVEIS = [
+    "cpf", "rg", "endereço", "telefone", "email", "e-mail", "cartão de crédito",
+    "dados bancários", "nome completo", "foto", "imagem", "selfie", "vídeo", "pix"
+]
+
+def filtrar_resposta_lgpd(resposta: str) -> str:
+    for termo in DADOS_SENSIVEIS:
+        if termo.lower() in resposta.lower():
+            return "⚠️ Por motivos de segurança e respeito à LGPD, este chatbot não coleta dados pessoais. Vamos continuar com informações genéricas, tudo bem?"
+    return resposta
 
 def obter_resposta_do_gemini(pergunta):
-    """Envia uma pergunta para o Gemini e retorna a resposta."""
     if chat_session:
         try:
             response = chat_session.send_message(pergunta)
-            return response.text
+            return filtrar_resposta_lgpd(response.text)
         except Exception as e:
             return f"Ocorreu um erro ao obter a resposta do Gemini: {e}"
     else:
         return "A sessão do chat não está ativa."
 
-
 def processar_mensagem_usuario(mensagem):
     prompt = f"""Você é um chatbot de uma instituição de caridade no Rio de Janeiro.
 Sua função é conectar pessoas que querem doar com instituições que precisam de ajuda.
 Mantenha suas respostas concisas e ofereça opções claras para o usuário escolher.
+
+⚠️ IMPORTANTE: Por motivos legais (LGPD), você NÃO deve solicitar nem sugerir que o usuário informe qualquer dado pessoal como nome, CPF, telefone, e-mail, endereço, dados bancários, fotos, etc.
 
 O usuário disse: '{mensagem}'.
 
@@ -122,3 +132,4 @@ def reset_chat():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
