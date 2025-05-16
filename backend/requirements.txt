@@ -1,1 +1,3 @@
-google-genai
+google.generativeai
+Flask
+Flask-Cors
