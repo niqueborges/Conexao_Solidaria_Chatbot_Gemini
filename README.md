@@ -1,4 +1,4 @@
-# 🤝 Conexão Solidária Chatbot
+# 🤝 Parceria Transformadora
 
 Um projeto para criar uma ponte de comunicação entre doadores e instituições. O webchat funciona com **HTML, CSS e JavaScript** no frontend, enquanto a inteligência do chatbot é processada em backend Python utilizando a **API do Google AI Studio** com os modelos Gemini. O sistema é focado na facilidade de uso, sem necessidade de cadastro no chat, e visa conectar pessoas que querem ajudar com as instituições que precisam. 🚀
 
@@ -19,7 +19,7 @@ Um projeto para criar uma ponte de comunicação entre doadores e instituições
 
 ## 📖 Sobre o Projeto
 
-O projeto Conexão Solidária implementa um chatbot funcional que conecta potenciais doadores a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso.
+O projeto Parceria Transformadora implementa um chatbot funcional que conecta potenciais doadores a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso.
 
 ---
 
@@ -139,6 +139,6 @@ O backend em Python com integração ao modelo Gemini permite:
 
 ## 🏆 Conclusão
 
-Com esta versão funcional, o Conexão Solidária já proporciona uma comunicação direta e acessível entre doadores e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
+Com esta versão funcional, o Parceria Transformadora já proporciona uma comunicação direta e acessível entre doadores e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
 
 
