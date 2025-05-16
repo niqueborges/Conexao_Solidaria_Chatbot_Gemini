@@ -1,6 +1,6 @@
 # 🤝 Conexão Solidária Chatbot
 
-Um projeto para criar uma ponte de comunicação entre doadores e instituições. A demonstração inicial utiliza um webchat simples com **HTML, CSS e JavaScript** no frontend, enquanto a lógica principal e a escalabilidade futura são planejadas com **Python** no backend. O foco é a facilidade de uso e o respeito à privacidade (sem cadastro no chat). 🚀
+Um projeto para criar uma ponte de comunicação entre doadores e instituições. O webchat funciona com **HTML, CSS e JavaScript** no frontend, enquanto a inteligência do chatbot é processada em backend Python utilizando a **API do Google AI Studio** com os modelos Gemini. O sistema é focado na facilidade de uso, sem necessidade de cadastro no chat, e visa conectar pessoas que querem ajudar com as instituições que precisam. 🚀
 
 ---
 
@@ -9,148 +9,136 @@ Um projeto para criar uma ponte de comunicação entre doadores e instituições
 1. [📖 Sobre o Projeto](#-sobre-o-projeto)
 2. [🛠️ Estrutura do Projeto](#️-estrutura-do-projeto)
 3. [💻 Tecnologias Utilizadas](#-tecnologias-utilizadas)
-4. [⚙️ Funcionalidades (Demonstração Inicial)](#️-funcionalidades-demonstração-inicial)
-5. [📂 Como Usar (Demonstração Inicial)](#-como-usar-demonstração-inicial)
+4. [⚙️ Funcionalidades](#️-funcionalidades)
+5. [📂 Como Usar](#-como-usar)
 6. [🚀 Escalabilidade e Arquitetura Futura](#-escalabilidade-e-arquitetura-futura)
 7. [🚧 Dificuldades e Aprendizados](#-dificuldades-e-aprendizados)
-8. [✨ Melhorias Pós-Projeto](#-melhorias-pós-projeto)
+8. [✨ Melhorias Futuras](#-melhorias-futuras)
 
 ---
 
 ## 📖 Sobre o Projeto
 
-Este projeto visa facilitar a comunicação entre pessoas que desejam doar e instituições que precisam de ajuda. Para a apresentação inicial, desenvolvemos um webchat simples utilizando HTML, CSS e JavaScript, demonstrando o fluxo básico de interação. A inteligência por trás do chatbot e a capacidade de escalar o sistema para funcionalidades mais avançadas são planejadas para serem implementadas com Python no backend.
+O projeto Conexão Solidária implementa um chatbot funcional que conecta potenciais doadores a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso.
 
 ---
 
 ## 🛠️ Estrutura do Projeto
 
+```
 conexao_solidaria_chatbot/
-├── src/
-│   ├── frontend/
-│   │   ├── index.html
-│   │   ├── script.js
-│   │   └── style.css
-│   └── backend/
-│       ├── chatbot_backend.py
-│       ├── data/
-│       │   └── instituicoes.json
-│       └── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+├── backend/
+│   ├── chatbot_backend.py
+│   ├── __init__.py
+│   └── requirements.txt
 ├── README.md
 └── venv/
+├── .gitignore
+└── LICENSE 
+```
 
 ---
 
 ## 💻 Tecnologias Utilizadas
 
-- **Frontend (Demonstração Inicial):**
-    - 🌐 **HTML**: Estrutura do webchat.
-    - 🎨 **CSS**: Estilização básica.
-    - ⚙️ **JavaScript**: Interatividade básica no navegador.
-    - **Backend (Planejado para Escalabilidade):**
-    - 🐍 **Python**: Linguagem para a lógica principal do chatbot.
-    - ⚙️ **`google-genai`**: Biblioteca Python para interagir com a **API do Google AI Studio e os modelos Gemini**.
-    - 💾 **JSON**: (Planejado) Para armazenar dados das instituições inicialmente (pode evoluir para um banco de dados).
-    - ⚙️ **Bibliotecas de PLN (Futuro):** NLTK, spaCy, ou serviços de nuvem como Dialogflow.
-    - ☁️ **Framework Web (Futuro):** Flask ou FastAPI para comunicação com o frontend.
+* **Frontend:**
+
+  * 🌐 HTML, CSS e JavaScript para interface e interação.
+* **Backend:**
+
+  * 🐍 Python para lógica do chatbot.
+  * ⚙️ Biblioteca `google-generativeai` para integração com a API do Google AI Studio.
+  * ☁️ Flask para criar a API REST que conecta frontend e backend.
+  * 💾 JSON para armazenar dados iniciais de instituições (planejado para expansão).
 
 ---
 
-## 🤖 Colaboração da IA
+## ⚙️ Funcionalidades
 
-Este projeto está sendo desenvolvido com a colaboração de uma Inteligência Artificial. As "tecnologias" e "funcionalidades" incluem:
-
-- **Processamento de Linguagem Natural (PLN):** Para entender e gerar texto em português.
-- **Geração de Código:** Auxílio na criação da estrutura do projeto, código HTML, CSS, JavaScript e Python.
-- **Sugestão de Arquitetura:** Propostas para a organização do projeto e seu escalonamento futuro.
-- **Explicação de Conceitos:** Esclarecimento de dúvidas sobre desenvolvimento web, APIs e melhores práticas.
-- **Formatação e Organização:** Ajuda na estruturação do README e de outras informações do projeto.
-- **Manutenção do Foco:** Auxílio para seguir os objetivos do projeto de forma eficiente.
+* Chatbot funcional que responde mensagens enviadas pelo usuário via frontend.
+* Backend integrado à API do Google Gemini para respostas em linguagem natural.
+* Botão para reiniciar a conversa, limpando o histórico e reiniciando a sessão.
+* Não exige cadastro, facilitando o uso e respeitando a privacidade.
+* Estrutura modular que facilita expansão para funcionalidades avançadas.
 
 ---
 
-## 🧠 A Inteligência Gemini
+## 📂 Como Usar
 
-O coração deste projeto é a **IA Gemini do Google**, um modelo de linguagem multimodal de última geração. Através da **API do Google AI Studio**, o backend em Python utiliza a capacidade do Gemini para:
+1. **Clone o repositório:**
 
-- **Entender a linguagem natural** dos doadores e das instituições.
-- **Processar e interpretar** suas necessidades e ofertas.
-- **Gerar respostas relevantes e informativas** para facilitar a conexão.
-- **Adaptar as conversas** de acordo com o contexto e as informações fornecidas.
+   ```bash
+   git clone https://github.com/niqueborges/Conexao_Solidaria_Chatbot_Gemini.git
+   ```
 
----
+2. **Configure a variável de ambiente `GOOGLE_API_KEY`** com sua chave da API do Google AI Studio:
 
-## 🔑 Gerenciamento da API Key
+   * No Linux/macOS:
 
-Para acessar a poderosa **IA Gemini através da API do Google AI Studio**, é necessário configurar uma **API Key**. No backend em Python (`chatbot_backend.py`), a chave da API é gerenciada da seguinte forma:
+     ```bash
+     export GOOGLE_API_KEY="sua_chave_aqui"
+     ```
+   * No Windows CMD:
 
-1.  **Variável de Ambiente:** A chave da API é lida de uma variável de ambiente chamada `GOOGLE_API_KEY` para maior segurança e flexibilidade.
-2.  **Configuração da Biblioteca:** A biblioteca `google-generativeai` utiliza essa chave para autenticar as requisições aos modelos Gemini.
+     ```cmd
+     set GOOGLE_API_KEY="sua_chave_aqui"
+     ```
 
-**Importante:** Certifique-se de definir a variável de ambiente `GOOGLE_API_KEY` no seu sistema com a sua chave válida do Google AI Studio para que o backend possa se comunicar com a IA Gemini.
+3. **Instale as dependências do backend:**
 
----
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
+4. **Execute o backend Flask:**
 
----
+   ```bash
+   python chatbot_backend.py
+   ```
 
-## 📂 Como Usar (Demonstração Inicial)
+5. **Abra o arquivo `frontend/index.html` no navegador.**
 
-1.  **Clone o repositório**:
-
-    ```bash
-    git clone [https://github.com/niqueborges/Conexao_Solidaria_Chatbot_Gemini.git](https://github.com/niqueborges/Conexao_Solidaria_Chatbot_Gemini.git)
-    ```
-
-2.  **Configure a variável de ambiente `GOOGLE_API_KEY`** no seu sistema com a sua chave do Google AI Studio.
-3.  **Execute o backend (simulado para a apresentação):** Rode o script `src/backend/chatbot_backend.py` para verificar a inicialização da API Gemini (você verá mensagens no console).
-4.  **Abra o arquivo `frontend/index.html`** no seu navegador.
-5.  **Interaja com o webchat:** Digite mensagens no campo de texto e veja as respostas simuladas que representam a inteligência da IA Gemini.
+6. **Interaja com o chatbot** digitando mensagens e recebendo respostas geradas via API Gemini.
 
 ---
 
 ## 🚀 Escalabilidade e Arquitetura Futura
 
-A arquitetura planejada para um sistema real e escalável é centrada no poder da **IA Gemini no backend em Python**. Isso permitirá:
+O backend em Python com integração ao modelo Gemini permite:
 
-* **Processamento de Linguagem Natural Avançado:** Utilizando toda a capacidade do Gemini para entender nuances e intenções complexas.
-* **Geração de Respostas Contextuais:** O Gemini poderá gerar respostas altamente relevantes e adaptadas à conversa.
-* **Integração com Dados das Instituições:** O backend poderá fornecer informações específicas sobre as instituições com base nas consultas do usuário, utilizando a inteligência do Gemini para fazer o match ideal.
-* **Suporte Multimodal (Futuro):** A capacidade multimodal do Gemini poderá ser explorada para lidar com imagens ou outros tipos de dados relevantes para doações e necessidades.
+* Entendimento avançado de linguagem natural para respostas contextuais.
+* Potencial integração com banco de dados real para armazenar informações das instituições.
+* Futuro suporte multimodal para lidar com imagens ou documentos.
+* Evolução para interface administrativa e filtros de doações mais inteligentes.
 
 ---
 
 ## 🚧 Dificuldades e Aprendizados
 
-Durante o desenvolvimento deste projeto, algumas dificuldades podem surgir:
+* Gerenciar corretamente a sessão de chat com a API Gemini para manter contexto.
+* Configuração e segurança da chave da API (`GOOGLE_API_KEY`).
+* Sincronizar o fluxo entre frontend estático e backend dinâmico.
+* Otimização dos prompts para respostas mais precisas.
 
-1.  **Integração Eficaz com a API Gemini:** Otimizar as prompts e o uso da API para obter as melhores respostas.
-2.  **Gerenciamento da Chave da API:** Garantir a segurança e o correto funcionamento da `GOOGLE_API_KEY`.
-3.  **Simulação da Inteligência Gemini no Frontend:** Representar adequadamente as capacidades da IA na demonstração inicial.
-4.  **Planejamento da Arquitetura Backend:** Definir a melhor forma de estruturar a lógica Python para interagir com a API Gemini.
-5.  **Escalabilidade com a API:** Considerar os limites de requisição e os custos associados ao uso da API Gemini em um sistema real.
+---
 
-O aprendizado envolverá a exploração da API do Google AI Studio, o desenvolvimento backend em Python para integração com APIs de IA e a compreensão das melhores práticas para utilizar modelos de linguagem grandes como o Gemini.
+## ✨ Melhorias Futuras
 
-## ✨ Melhorias Pós-Projeto
-
-Após a apresentação inicial, algumas melhorias podem ser implementadas:
-
-1.  **Implementação do Backend em Python:** Construir a lógica real do chatbot, integrando a API do Gemini Studio.
-2.  **Integração do Frontend com o Backend:** Fazer o webchat se comunicar com a API Python.
-3.  **Implementação de Lógica de PLN Básica:** Usar NLTK ou spaCy para um entendimento inicial da linguagem.
-4.  **Estruturação dos Dados das Instituições em um formato mais adequado.**
-5.  **Criação de uma interface administrativa básica para gerenciar as instituições.**
-6.  **Otimização da interação com a IA para um desenvolvimento mais rápido e eficiente.**
+* Implementar armazenamento persistente e administração de dados das instituições.
+* Criar interface de login para usuários e organizações.
+* Aprimorar interface do frontend com frameworks modernos.
+* Adicionar suporte a múltiplos canais, como WhatsApp ou Telegram.
+* Desenvolver métricas e análises para melhorar a efetividade das conexões.
 
 ---
 
 ## 🏆 Conclusão
 
-Este projeto, mesmo em sua demonstração inicial, ilustra o potencial de conectar doadores e instituições de forma acessível, com o apoio da inteligência artificial no processo de desenvolvimento. A arquitetura planejada com um backend em Python oferece um caminho claro para a escalabilidade e a implementação de funcionalidades mais inteligentes no futuro. 💪
+Com esta versão funcional, o Conexão Solidária já proporciona uma comunicação direta e acessível entre doadores e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
 
-😊 **Contribuições e ideias são bem-vindas\!**
 
----
-
-🎉
