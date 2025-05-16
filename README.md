@@ -47,9 +47,9 @@ conexao_solidaria_chatbot/
     - 🌐 **HTML**: Estrutura do webchat.
     - 🎨 **CSS**: Estilização básica.
     - ⚙️ **JavaScript**: Interatividade básica no navegador.
-- **Backend (Planejado para Escalabilidade):**
+    - **Backend (Planejado para Escalabilidade):**
     - 🐍 **Python**: Linguagem para a lógica principal do chatbot.
-    - ⚙️ **`google-generativeai`**: Biblioteca Python para interagir com a **API do Google AI Studio e os modelos Gemini**.
+    - ⚙️ **`google-genai`**: Biblioteca Python para interagir com a **API do Google AI Studio e os modelos Gemini**.
     - 💾 **JSON**: (Planejado) Para armazenar dados das instituições inicialmente (pode evoluir para um banco de dados).
     - ⚙️ **Bibliotecas de PLN (Futuro):** NLTK, spaCy, ou serviços de nuvem como Dialogflow.
     - ☁️ **Framework Web (Futuro):** Flask ou FastAPI para comunicação com o frontend.
@@ -58,7 +58,7 @@ conexao_solidaria_chatbot/
 
 ## 🤖 Colaboração da IA
 
-Este projeto está sendo desenvolvido com a colaboração de uma Inteligência Artificial (eu!). Minhas "tecnologias" e "funcionalidades" incluem:
+Este projeto está sendo desenvolvido com a colaboração de uma Inteligência Artificial. As "tecnologias" e "funcionalidades" incluem:
 
 - **Processamento de Linguagem Natural (PLN):** Para entender e gerar texto em português.
 - **Geração de Código:** Auxílio na criação da estrutura do projeto, código HTML, CSS, JavaScript e Python.
