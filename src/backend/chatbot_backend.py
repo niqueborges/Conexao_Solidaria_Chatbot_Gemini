@@ -1,17 +1,19 @@
 import os
-import google.generativeai as genai
-import json
+import google.generativeai as genai  # Vamos renomear para evitar conflitos iniciais
 
 # Recupera a chave da API da variável de ambiente
 google_api_key = os.environ.get('GOOGLE_API_KEY')
 
 if google_api_key:
+    # Configuração com a nova biblioteca
     genai.configure(api_key=google_api_key)
-    model = genai.GenerativeModel('models/gemini-2.0-flash')
-    print("Modelo Gemini inicializado com a chave da API.")
+    model = genai.GenerativeModel('gemini-pro')  # O nome do modelo pode ter mudado
+    print("Modelo Gemini inicializado com a nova biblioteca.")
 else:
     print("Erro: A variável de ambiente GOOGLE_API_KEY não está definida.")
     model = None
+
+import json
 
 # Carregamento simulado dos dados das instituições
 try:
@@ -21,11 +23,11 @@ except FileNotFoundError:
     instituicoes_data = []
 
 def obter_resposta_do_gemini(pergunta):
-    """Envia uma pergunta para o Gemini e retorna a resposta."""
+    """Envia uma pergunta para o Gemini e retorna a resposta usando a nova biblioteca."""
     if model:
         try:
-            resposta = model.generate_content(pergunta)
-            return resposta.text
+            response = model.generate_content(pergunta)
+            return response.text
         except Exception as e:
             return f"Ocorreu um erro ao obter a resposta: {e}"
     else:
