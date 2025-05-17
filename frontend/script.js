@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            sendMessage();
-        }
-    });
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        sendMessage();
+    }
+});
 
     const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', async () => {
@@ -65,8 +66,12 @@ resetButton.addEventListener('click', async () => {
     }
 
     function showTypingIndicator(show) {
-        typingIndicator.style.display = show ? 'block' : 'none';
+    if (show) {
+        typingIndicator.classList.add('show');
+    } else {
+        typingIndicator.classList.remove('show');
     }
+}
 
     async function sendToBackend(message) {
         showTypingIndicator(true);
