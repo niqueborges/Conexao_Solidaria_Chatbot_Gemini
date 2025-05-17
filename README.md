@@ -21,19 +21,19 @@
 ## 📖 Sobre o Projeto
 
 O projeto **Parceria Transformadora** implementa um chatbot funcional que conecta potenciais doadores/apoiadores/voluntários a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso. 🚀
+
 ---
 
 ## 🛠️ Estrutura do Projeto
 
 ```
-
 Parceria-Transformadora-Gemini/
 ├── backend/
 │   ├── __init__.py
 │   ├── chat_logic.py
 │   ├── chatbot_backend.py
 │   ├── modelos.py
-│   ├── utils.py
+│   ├── utils.py 
 │   └── requirements.txt
 ├── frontend/
 │   ├── assets/
@@ -43,10 +43,9 @@ Parceria-Transformadora-Gemini/
 │   ├── script.js
 │   └── style.css
 ├── .gitignore
-├── LICENSE
+├── LICENSE 
 ├── README.md
-
-````
+```
 
 ---
 
@@ -83,7 +82,7 @@ Parceria-Transformadora-Gemini/
 
    ```bash
    git clone https://github.com/niqueborges/Parceria-Transformadora-Gemini.git
-````
+   ```
 
 2. **Configure a variável de ambiente `GOOGLE_API_KEY`** com sua chave da API do Google AI Studio:
 
@@ -99,22 +98,45 @@ Parceria-Transformadora-Gemini/
      set GOOGLE_API_KEY="sua_chave_aqui"
      ```
 
-3. **Instale as dependências do backend:**
+3. **(Opcional, mas recomendado) Ative seu ambiente virtual (venv):**
+
+   Se você criou um ambiente virtual para o projeto, ative-o antes de instalar as dependências. Isso ajuda a isolar as bibliotecas do projeto.
+
+   * No Linux/macOS:
+
+     ```bash
+     source venv/bin/activate
+     ```
+
+   * No Windows:
+
+     ```cmd
+     venv\Scripts\activate
+     ```
+
+   Se estiver usando Jupyter Notebook, configure o kernel com:
+
+   ```bash
+   pip install ipykernel
+   python -m ipykernel install --user --name=nome_do_venv
+   ```
+
+4. **Instale as dependências do backend:**
 
    ```bash
    cd backend
    pip install -r requirements.txt
    ```
 
-4. **Execute o backend Flask:**
+5. **Execute o backend Flask:**
 
    ```bash
    python chatbot_backend.py
    ```
 
-5. **Abra o arquivo `frontend/index.html` no navegador.**
+6. **Abra o arquivo `frontend/index.html` no navegador.**
 
-6. **Interaja com o chatbot** digitando mensagens e recebendo respostas geradas via API Gemini.
+7. **Interaja com o chatbot** digitando mensagens e recebendo respostas geradas via API Gemini.
 
 ---
 
@@ -152,5 +174,6 @@ O backend em Python com integração ao modelo Gemini permite:
 
 Com esta versão funcional, o **Parceria Transformadora** já proporciona uma comunicação direta e acessível entre doadores/apoiadores/voluntários e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
 
-Agradeço a todos os envolvidos na **Imersão IA da Alura** por tornarem este projeto possível e por contribuírem para um futuro mais conectado e solidário. 🌟
-```
+---
+
+Agradeço a todos os envolvidos na **Imersão IA da Alura** e espero que este projeto inspire novas ideias e colaborações no futuro! 🌟
