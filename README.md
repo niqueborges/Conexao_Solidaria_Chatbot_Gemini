@@ -1,67 +1,65 @@
-Claro! Aqui está seu README atualizado com as informações da estrutura e do backend modularizado que você passou, mantendo a formatação original:
-
----
-
 # 🤝 Parceria Transformadora
 
-Um projeto para criar uma ponte de comunicação entre doadores e instituições. O webchat funciona com **HTML, CSS e JavaScript** no frontend, enquanto a inteligência do chatbot é processada em backend Python utilizando a **API do Google AI Studio** com os modelos Gemini. O sistema é focado na facilidade de uso, sem necessidade de cadastro no chat, e visa conectar pessoas que querem ajudar com as instituições que precisam. 🚀
+> 🚀 Projeto desenvolvido durante a **Imersão IA da Alura** — uma experiência prática de criação com inteligência artificial generativa usando a API do Google AI Studio.
 
+> 🌟 Este projeto visa conectar doadores, apoiadores e voluntários a instituições de forma rápida e intuitiva, utilizando um chatbot funcional.
 ---
 
 ## 📋 Índice
 
-1. [📖 Sobre o Projeto](#-sobre-o-projeto)
-2. [🛠️ Estrutura do Projeto](#️-estrutura-do-projeto)
-3. [💻 Tecnologias Utilizadas](#-tecnologias-utilizadas)
-4. [⚙️ Funcionalidades](#️-funcionalidades)
-5. [📂 Como Usar](#-como-usar)
-6. [🚀 Escalabilidade e Arquitetura Futura](#-escalabilidade-e-arquitetura-futura)
-7. [🚧 Dificuldades e Aprendizados](#-dificuldades-e-aprendizados)
-8. [✨ Melhorias Futuras](#-melhorias-futuras)
+1. [📖 Sobre o Projeto](#-sobre-o-projeto)  
+2. [🛠️ Estrutura do Projeto](#️-estrutura-do-projeto)  
+3. [💻 Tecnologias Utilizadas](#-tecnologias-utilizadas)  
+4. [⚙️ Funcionalidades](#️-funcionalidades)  
+5. [📂 Como Usar](#-como-usar)  
+6. [🚀 Escalabilidade e Arquitetura Futura](#-escalabilidade-e-arquitetura-futura)  
+7. [🚧 Dificuldades e Aprendizados](#-dificuldades-e-aprendizados)  
+8. [✨ Melhorias Futuras](#-melhorias-futuras)  
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O projeto Parceria Transformadora implementa um chatbot funcional que conecta potenciais doadores a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso.
-
+O projeto **Parceria Transformadora** implementa um chatbot funcional que conecta potenciais doadores/apoiadores/voluntários a instituições de forma rápida e intuitiva. O frontend simples em HTML, CSS e JavaScript permite a interação pelo navegador, enquanto o backend em Python utiliza a API Gemini para compreender as mensagens e gerar respostas contextuais em linguagem natural. O sistema não requer cadastro, prezando pela privacidade e facilidade de acesso. 🚀
 ---
 
 ## 🛠️ Estrutura do Projeto
 
 ```
-Parceria-Transfromadora-Gemini/
-├── frontend/
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
+
+Parceria-Transformadora-Gemini/
 ├── backend/
+│   ├── __init__.py
+│   ├── chat_logic.py
 │   ├── chatbot_backend.py
 │   ├── modelos.py
 │   ├── utils.py
-│   ├── chat_logic.py
-│   ├── __init__.py
 │   └── requirements.txt
-├── README.md
-└── venv/
+├── frontend/
+│   ├── assets/
+│   │   ├── fundo.png
+│   │   └── logo.png
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
 ├── .gitignore
-└── LICENSE 
-```
+├── LICENSE
+├── README.md
+
+````
 
 ---
 
 ## 💻 Tecnologias Utilizadas
 
 * **Frontend:**
-
   * 🌐 HTML, CSS e JavaScript para interface e interação.
-* **Backend:**
 
+* **Backend:**
   * 🐍 Python para lógica do chatbot.
   * ⚙️ Biblioteca `google-generativeai` para integração com a API do Google AI Studio.
   * ☁️ Flask para criar a API REST que conecta frontend e backend.
   * 🔄 Modularização do backend com arquivos:
-
     * `modelos.py` para inicialização e controle do modelo Gemini,
     * `utils.py` para funções auxiliares como filtro LGPD,
     * `chat_logic.py` para a lógica do chatbot e processamento das mensagens.
@@ -85,7 +83,7 @@ Parceria-Transfromadora-Gemini/
 
    ```bash
    git clone https://github.com/niqueborges/Parceria-Transformadora-Gemini.git
-   ```
+````
 
 2. **Configure a variável de ambiente `GOOGLE_API_KEY`** com sua chave da API do Google AI Studio:
 
@@ -94,6 +92,7 @@ Parceria-Transfromadora-Gemini/
      ```bash
      export GOOGLE_API_KEY="sua_chave_aqui"
      ```
+
    * No Windows CMD:
 
      ```cmd
@@ -151,5 +150,7 @@ O backend em Python com integração ao modelo Gemini permite:
 
 ## 🏆 Conclusão
 
-Com esta versão funcional, o Parceria Transformadora já proporciona uma comunicação direta e acessível entre doadores e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
+Com esta versão funcional, o **Parceria Transformadora** já proporciona uma comunicação direta e acessível entre doadores/apoiadores/voluntários e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
 
+Agradeço a todos os envolvidos na **Imersão IA da Alura** por tornarem este projeto possível e por contribuírem para um futuro mais conectado e solidário. 🌟
+```
