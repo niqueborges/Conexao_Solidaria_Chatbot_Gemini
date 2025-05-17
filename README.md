@@ -33,6 +33,9 @@ conexao_solidaria_chatbot/
 │   └── style.css
 ├── backend/
 │   ├── chatbot_backend.py
+│   ├── modelos.py
+│   ├── utils.py
+│   ├── chat_logic.py
 │   ├── __init__.py
 │   └── requirements.txt
 ├── README.md
@@ -53,6 +56,11 @@ conexao_solidaria_chatbot/
   * 🐍 Python para lógica do chatbot.
   * ⚙️ Biblioteca `google-generativeai` para integração com a API do Google AI Studio.
   * ☁️ Flask para criar a API REST que conecta frontend e backend.
+  * 🔄 Modularização do backend com arquivos:
+
+    * `modelos.py` para inicialização e controle do modelo Gemini,
+    * `utils.py` para funções auxiliares como filtro LGPD,
+    * `chat_logic.py` para a lógica do chatbot e processamento das mensagens.
   * 💾 JSON para armazenar dados iniciais de instituições (planejado para expansão).
 
 ---
@@ -60,7 +68,7 @@ conexao_solidaria_chatbot/
 ## ⚙️ Funcionalidades
 
 * Chatbot funcional que responde mensagens enviadas pelo usuário via frontend.
-* Backend integrado à API do Google Gemini para respostas em linguagem natural.
+* Backend modularizado integrado à API do Google Gemini para respostas em linguagem natural.
 * Botão para reiniciar a conversa, limpando o histórico e reiniciando a sessão.
 * Não exige cadastro, facilitando o uso e respeitando a privacidade.
 * Estrutura modular que facilita expansão para funcionalidades avançadas.
@@ -140,5 +148,3 @@ O backend em Python com integração ao modelo Gemini permite:
 ## 🏆 Conclusão
 
 Com esta versão funcional, o Parceria Transformadora já proporciona uma comunicação direta e acessível entre doadores e instituições, utilizando inteligência artificial para enriquecer as interações. A arquitetura flexível garante que o projeto possa crescer e se adaptar conforme as necessidades reais do usuário e as possibilidades tecnológicas.
-
-
